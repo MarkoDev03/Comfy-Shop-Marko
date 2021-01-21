@@ -1,0 +1,211 @@
+@media only screen and (max-width:600px) and (min-width:400px) {
+    .text-center-link{
+        display: none;
+    }
+    .fa-shopping-cart,.fa-cart-plus,.fa-bars,.fa-search{
+        font-size:20px;
+    }
+    .top-headline,.text-shop,.now{
+         font-size: 14px;
+    }
+    .bottom-headline,.counter{
+        font-size: 10px;
+    }
+    .counter{
+        right: -20px;
+    }
+    .lang-img{
+        height: 20px;
+        width: 35px;
+    }
+    .swiper1{
+        height: 340px;
+    }
+    .shop-now{
+        padding: 10px;
+        padding-left: 10px;
+        padding-right:10px;
+    }
+    .now{
+        padding: 2px;
+    }
+    .swiper-pagination{
+        padding-top: 3px;
+        padding-bottom: 3px;
+        opacity: .4;
+    }
+    .swiper-button-prev::after,.swiper-button-next::after{
+        font-size: 40px;
+    }
+    .swiper-button-prev,.swiper-button-next{
+        padding: 15px;
+    }
+    .coupons-headline{
+        margin-top: 40px;
+    }
+    .collcetionTagLinec{
+        font-size: 31px;
+    }
+    .wrapper-text{
+        margin-top: 0px;
+    }
+    .text-div{  
+        margin: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 300px;
+      
+    }
+    .text-about-us,.e2{
+        font-size: 19px;
+        
+    }
+    #spanTxt,.oranges{
+        font-size: 25px;
+    }
+    .swiper2{
+        margin-top: 0px;
+        height: 300px;
+        margin-bottom: 0px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .products-discount{      
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 50px;
+    }
+    #collectionText{
+        font-size: 17px;
+        margin-top: 30px;
+        letter-spacing: 1px;
+    }
+    .swiper4{
+        width: 80%;
+        margin-top: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .slide4{
+        width: 200px;
+        height: 260px;
+    }
+    .imgCntn{
+        width: 100%;
+        height: 200px;
+    }
+    .nameCntn{
+        width: 100%;
+        height: 60px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+    }
+    .txtcnt{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 18px; 
+    }
+    .ambient-content{
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 55px;/*!!*/
+        margin-top: 0px;
+    }
+    .wrapperAmb{
+        margin: 0px;
+        width: 100%;     
+        margin-top: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-gap: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    } 
+    .swiper5{
+        height: 200px;
+        width: 360px;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .slide5{
+       height: 200px;
+       width: 360px;
+    }
+    .swiper6{
+       height:300px;
+       margin-top: 30px;
+       width: 360px;
+       margin: auto;
+       margin-left: auto;
+        margin-right: auto;
+    }     
+    .get-discount{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 0px;
+    }
+    .swiper8{
+        width: 300px;
+    }
+    .num-pad{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 200px;   
+    }
+    .searchdiscounts{
+        padding: 7px;
+        font-size: 20px;
+    }
+    .products-content{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .products-main{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .location-of-store{       
+        padding-top: 35px;
+        padding-bottom: 25px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    .wrapper-location{
+        width: 100%;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+    }
+    #map{
+        margin: 0px;
+        width: 350px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .search-shops,.right-location,.left-location{
+        margin: 0px;
+        width: 300px;       
+    }
+    .right-location{
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:40px ;
+    }
+    .search-shops{
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:40px ;
+    }
+    .swiper7{
+        width: 300px;
+    }
+}

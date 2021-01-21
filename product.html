@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="responsive2.css">
+</head>
+
+<body>
+   <header class="header-mp">
+      <i class="fas fa-sort-amount-up"></i>
+      <div class="logo" id="headline-logo">
+      </div>
+      <i class="fas fa-search"></i>
+   </header>
+   <div class="down-bar">
+      <i class="fas fa-home"></i>
+
+   </div>
+   <div class="search-block" id="searchDiv">
+      <div class="div-for-live-search">
+         <i class="fas fa-times" id="closeResponsiveSearch"></i>
+         <input type="search" name="search" id="searchPages" autocomplete="off" class="serahc-through-json"
+            placeholder="Search products here...">
+      </div>
+   </div>
+   <div id="locationOfProducts" class="products-content"></div>
+   <div class="ovelrayer"></div>
+   <div class="pop-up-overlay">
+      <div class="sort-functions" style="height: auto;">
+         <i class="fas fa-times x"></i>
+         <p class="sort-headline">SORT BY</p>
+         <button class="sort-button" id="ascPrice">price ascending </button>
+         <button class="sort-button" id="descPrice">price descending</button>
+         <button class="sort-button" id="ascName">name ascending</button>
+         <button class="sort-button" id="descName">name descending</button>
+      </div>
+   </div>
+</body>
+<script src="searched.js"></script>
+
+</html>

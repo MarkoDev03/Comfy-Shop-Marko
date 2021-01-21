@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Online shop for furniture and devices.">
+   <meta name="author" content="Marko Perovic">
+   <meta name="keywords" content="furniture">
+   <meta name="application-name" content="Comfy Shop">
+   <meta name="generator" content="Visual Studio Code">
+   <meta name="site_name" content="Comfy Shop">
+   <meta name="theme-color" content="#ffffff">
+   <meta property="og:type" content="article" />
+   <meta property="og:title" content="Comfy Shop" />
+   <meta property="og:description" content="Online shop for furniture and devices" />
+   <meta property="og:url" content="https://eshopmarko.netlify.app" />
+   <meta property="og:site_name" content="Comfy Shop" />
+   <link rel="shortcut icon" type="image/png" href="./images/logo.png">
+   <link rel="apple-touch-icon" href="./images/logo192.png">
+   <noscript>alert('This browser does not support JavaScript on this website.');var div =
+      document.createElement('div');var text = document.createTextNode('This browser does not support JavaScript on this
+      website.');div.appendChild(text);document.querySelector('body').appendChild(div); </noscript>
+   <title>Comfy Shop</title>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="style.css" >
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="responsive.css">
+   <link rel="stylesheet" href="responsive2.css">
+   <link rel="manifest" href="manifest.json">
+   <link rel="stylesheet" href="responsive3.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+   <script
+      src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+</head>
+
+<body id="body" >
+   <header class="header-mp">
+      <div class="burger">
+         <i class="fas fa-bars"></i>
+      </div>
+      <div class="logo" id="headline-logo">
+      </div>
+      <div class="cart-logo-hed">
+         <div class="counter">0</div>
+         <i class="fas fa-cart-plus"></i>
+      </div>
+   </header>
+   <div class="burger-menu" id="burgerM">
+      <button class="close-buttno" id="close"><i class="far fa-times-circle"></i></button>
+      <div class="search-box">
+         <div class="box">
+            <i class="fas fa-search"></i>
+            <input type="search" name="search" id="search" class="search-field" placeholder="Search products here..."
+               autocomplete="off">
+         </div>
+         <div class="list-of-items"></div>
+      </div>
+      <div class="link-to-page">
+         <p class="name-page">HOME</p>
+      </div>
+      <div class="link-to-page">
+         <p class="name-page">PRODUCTS</p>
+      </div>
+      <div class="link-to-page">
+         <p class="name-page">ABOUT</p>
+      </div>
+      <div class="link-to-page">
+         <p class="name-page">CONTACT</p>
+      </div>
+      <div class="link-to-page">
+         <p class="name-page"></p>
+      </div>
+   </div>
+   <div class="cart">
+      <button class="close-buttno" id="closeButton"><i class="far fa-times-circle"></i></button>
+      <h1 class="tag-headline">Your Cart</h1>
+      <div class="cart-content-div">
+      </div>
+      <div class="price-he">
+         <h1 class="tag-headline">Your Total:</p>
+            <p class="tag-headline price price-crt"></p>
+      </div>
+      </h1>
+      <button class="clear-cart">Clear Cart</button>
+   </div>
+   <div class="tnx-tag" >
+      <div class="langs-content">
+         <div class="langs" id="langs-images"></div>
+         <div class="list-of-langs" id="list-langs"></div>
+      </div>
+      <div class="text-center-link" id="links">
+      </div>
+      <i class="fas fa-search" id="searchShower"></i>
+   </div>
+   <div class="search-block" id="searchDiv">
+      <div class="div-for-live-search">
+         <i class="fas fa-times" id="closeResponsiveSearch"></i>
+         <input type="search" name="search" id="searchPages" autocomplete="off" class="serahc-through-json"placeholder="Search products here...">
+      </div>
+   </div>
+   <div class="swiper-container swiper1">
+      <div class="swiper-wrapper" id="contentOfSlideShow">
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+   </div>
+   <section class="coupons-headline" id="historyCon">
+      <p class="collcetionTagLinec">history of furniture</p>
+      <div class="wrapper-text">
+         <div class="text-div">
+            <div class="wrapp-text">
+               <div class="swiper-container swiper3">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide swiperslide3">
+                        <div class="text-about-us" id="historycal-text" style="text-align: justify;"></div>
+                     </div>
+                     <div class="swiper-slide swiperslide3">
+                        <p id="p2"></p>
+                     </div>
+                     <div class="swiper-slide swiperslide3">
+                        <p id="p3"></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-pagination3"></div>
+            </div>
+         </div>
+         <div class="swiper-container swiper2" data-aos="zoom-in-up" data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+            <div class="swiper-wrapper" id="wrp">
+            </div>
+            <div class="swiper-pagination2"></div>
+         </div>
+      </div>
+   </section>
+   <div class="products-discount" id="collection">
+      <p class="collcetionTagLinec">COLLECTIONS</p>
+      <p id="collectionText" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">'Vipp’s venture
+         into  projects like the Vipp Hotel has prompted  a line of furniture to inhabit
+         these spaces. Through a tactile approach, a new, softer layerisaddedto our trademark material through 80 years
+         – steel.' - Kasper Egelund, CEO and 3rd  corners and low back- and armrests, the
+         Vipp Loft sofa embodies a rectangular expression.Like the VippChimney sofa, it combines a crisp upholstery
+         palette with a steel frame in Vipp’s coating.</p>
+      <div class="swiper-container swiper4" data-aos="zoom-in-up" ata-aos-duration="300">
+         <div class="swiper-wrapper" id="sw4con">
+         </div>
+         <div class="swiper-pagination4"></div>
+      </div>
+   </div>
+   <div class="ambient-content" id="ambient">
+      <p class="collcetionTagLinec">AMBIENT</p>
+      <div class="wrapperAmb">
+         <div class=" swiper5" id="cntn5" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+         </div>
+         <div data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <div class="swiper-container swiper6">
+               <div class="swiper-wrapper" id="cntn6"></div>
+            </div>
+            <div class="swiper-pagination6"></div>
+         </div>
+      </div>
+   </div>
+   <div class="get-discount" id="discounts">
+      <p class="collcetionTagLinec">DISCOUNTS</p>
+      <div class="swiper-container swiper7" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+         <div class="swiper-wrapper" id="wrapper7"></div>
+         <div class="swiper-button-next7 swiper-button-next"></div>
+         <div class="swiper-button-prev7 swiper-button-prev"></div>
+      </div>
+
+      <div class="insert-code">
+         <p class="collcetionTagLinec">INSERT CODE TO GET DISCOUNT</p>
+         <div style="display: flex;justify-content: center;align-items: center;">
+            <input type="number" name="text" id="numpad" class="num-pad" autocomplete="off" placeholder="Your code...">
+            <button id="serahcsop" onclick="search()" class="searchdiscounts">SUBMIT</button>
+         </div>
+         <div class="swiper-container swiper8" data-aos="zoom-in-up" data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+            <div class="swiper-wrapper" id="searchDiscountsResults"></div>
+            <div class=" swiper-button-next8 swiper-button-next"></div>
+            <div class="swiper-button-prev8 swiper-button-prev"></div>
+         </div>
+      </div>
+
+   </div>
+   <section class="products-main" id="form">
+      <p class="collcetionTagLinec">PRODUCTS</p>
+      <div class="sort-products-index"  data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">SORT  <i class="fas fa-sort-amount-up"></i></div>  
+  <div class="products-content"></div>
+   </section>
+   <div class="location-of-store" id="location">
+      <p class="collcetionTagLinec">Location</p>
+      <div class="wrapper-location">
+         <div class="left-location" id="map" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+         </div>
+         <div class="right-location" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <p class="collcetionTagLinec">search shops</p>
+            <input type="search" name="search" id="searchShops" class="search-shops" autocomplete="off" autofocus="off"
+               placeholder="Search shops here...">
+            <shop-list class="disc" id="listaShop"></shop-list>
+         </div>
+      </div>
+   </div>
+   <div class="shop-big-img"></div>
+   <div class="width-div-img"></div>
+   <div class="shop-code"></div>
+   <div class="overlay2"></div>
+   <div class="ovelrayer"></div>
+   <div class="pop-up-overlay">
+      <div class="sort-functions" style="border-radius: 0%;">
+         <i class="fas fa-times x"></i>
+         <p class="sort-headline">SORT BY</p>
+<div id="sort-method">
+         <button class="sort-button" id="all">all</button>
+         <button class="sort-button" id="devices">devices</button>
+         <button class="sort-button" id="chairs">chairs</button>
+         <button class="sort-button" id="tables">tables</button>
+         <button class="sort-button" id="lights">lights</button>
+         <button class="sort-button" id="bed">bed</button>
+         <button class="sort-button" id="picture">picture</button>
+         <button class="sort-button" id="bathroom">bathroom</button>
+         <button class="sort-button" id="woredrobers">woredrobers</button>
+         <button class="sort-button" id="elements">elements</button>
+         <button class="sort-button" id="decorative">decorative</button>
+         <button class="sort-button" id="carpet">carpet</button>
+      </div>
+      </div>
+   </div>
+   <div class="review">
+      <p class="collcetionTagLinec">ALL LINKS</p>
+      <div class="links-content" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+         <div class="link-block" id="link-block-1">
+           <p class="link-block-headline">About us</p>
+           <div class="link-location" id="location-1"></div>
+         </div>
+         <div class="link-block" id="link-block-2">
+            <p class="link-block-headline">Products</p>
+            <div class="link-location" id="location-2"></div>
+         </div>
+         <div class="link-block" id="link-block-3">
+            <p class="link-block-headline">Service</p>
+            <div class="link-location" id="location-3"></div>
+         </div>
+         <div class="link-block" id="link-block-4">
+            <p class="link-block-headline">My account</p>
+            <div class="link-location" id="location-4"></div>
+         </div>
+      </div>
+      <div class="play-values">
+       
+     
+      </div>
+   </div>
+   <footer class="footer">
+      <p class="copyright">Copyright © Marko Perović 2021 All rights reserved .</p>
+   </footer>
+
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="appsource.js"></script>
+<script>
+   AOS.init();
+</script>
+<script src="index.js"></script>
+<script></script>
+</html>
