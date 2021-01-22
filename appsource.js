@@ -73,7 +73,7 @@ function changeSource(ID) {
 }
 
 /*SCROLLUJ */
-var htmlPages = [{ name: "PRODUCTS", url: "javascript: scrollToForm();" }, { name: "HISTORY", url: "javascript: scrollToHistory();" }, { name: "COLLECTIONS", url: "javascript: scrollToCollections();" }, { name: "DISCOUNTS", url: "javascript: scrollToDiscounts()" }, { name: "AMBIENT", url: "javascript: scrollToAmbient();" }, { name: "BLOG", url: "#" }, { name: "LOCATION", url: "javascript: scrollToLocation();" }];
+var htmlPages = [{ name: "PRODUCTS", url: "javascript: scrollToForm();" }, { name: "HISTORY", url: "javascript: scrollToHistory();" }, { name: "COLLECTIONS", url: "javascript: scrollToCollections();" }, { name: "DISCOUNTS", url: "javascript: scrollToDiscounts()" }, { name: "AMBIENT", url: "javascript: scrollToAmbient();" }, { name: "BLOG", url: "javascript: scrollToBlog();" }, { name: "LOCATION", url: "javascript: scrollToLocation();" }];
 
 
 function showLinks() {
@@ -397,7 +397,7 @@ class UI {
     displayProducts(products) {
         let result = '';
         products.forEach(itemInfo => {
-            result += `<article  class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            result += `<article  data-open="${itemInfo.id}" class="product opes" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
       <primary class="primary-info">
          <category class="category-div"><i class="fas fa-window-restore"></i>
             <p class="category">${itemInfo.category}</p>
@@ -426,13 +426,17 @@ class UI {
       </lista>
       <state class="availability">Available</state>
    </article>`;
+   
         });
         productsContent.innerHTML = result;
 
     }
 
 
-   
+   visitPro(id){
+    window.location.href = 'single-product-index.html'; var geter = Storage.getProduct(id);
+    sessionStorage.setItem("productId",geter);
+   }
 
     convertArray(products) {
 
@@ -1590,6 +1594,10 @@ function scrollToLocation() {
     document.querySelector('#location').scrollIntoView({behavior:'smooth'});
 }
 
+function scrollToBlog() {
+    document.querySelector('#blog').scrollIntoView({behavior:'smooth'});
+}
+
 function blockOne() {
     for(var i=0;i<linkOne.length;i++) {
         linkBlockOne.innerHTML += ` <a href="" class="inlblock-link">${linkOne[i].link}</a>`;
@@ -1631,3 +1639,91 @@ var copyRightText = document.createElement('copyright');
 copyRightText.classList.add('copyright');
 copyRightText.innerText = "Copyright © Marko Perović 2021 All rights reserved.";
 footerRights.appendChild(copyRightText);
+
+/*SEARCH IN BURGER MENU FOR DISSAPEARED PAGES ON MAIN INEX FILE */
+
+var searchBurger = document.getElementById('search');
+var listOfItems = document.querySelector('.list-of-items');
+var burgerArray = [
+    {name:"products",scrollId:"#form"},
+    {name:"history",scrollId:"#historyCon"},
+    {name:"collections",scrollId:"#collection"},
+    {name:"discounts",scrollId:"#discounts"},
+    {name:"ambient",scrollId:"#ambient"},
+    {name:"blog",scrollId:"#blog"},
+    {name:"location",scrollId:"#location"}
+];
+
+function setListForBurger(items) {
+    clearBurgerList();
+    for(const item of items) {
+        var lista = document.createElement('list');
+        var text = document.createTextNode(item.name);
+        lista.classList.add('lista-burger');
+        lista.appendChild(text);       
+        listOfItems.appendChild(lista);
+        lista.addEventListener('click',() => {
+            document.querySelector(item.scrollId).scrollIntoView({behavior:'smooth'});
+            closeBurgerMenu();
+            clearBurgerList();
+        })
+    }
+    if(items.length === 0) {
+        setNoResultsForBurger();
+    }
+}
+
+function  clearBurgerList() {
+    while(listOfItems.firstChild){
+        listOfItems.removeChild(listOfItems.firstChild);
+    }
+}
+
+function setNoResultsForBurger() {
+    var lista = document.createElement('list');
+    var text = document.createTextNode('No results found for `' + searchBurger.value + '`');
+    lista.classList.add('lista-burger');
+    lista.appendChild(text);
+    listOfItems.appendChild(lista);
+}
+
+function getRelevancyForBurger(valueBurger, searchTermBurger) {
+        if(valueBurger === searchTermBurger) {
+            return 2;
+        }else if(valueBurger.startsWith(searchTermBurger)) {
+            return 1;
+        }else if (valueBurger.includes(searchTermBurger)) {
+            return 0;
+        }else {
+            return -1;
+        }
+}
+
+searchBurger.addEventListener('input', (event) => {
+    let valueForBurger = event.target.value;
+    if(valueForBurger && valueForBurger.trim().length > 0) {
+        valueForBurger = valueForBurger.trim().toLowerCase();
+  setListForBurger(burgerArray.filter(item => {
+    return item.name.includes(valueForBurger);
+}).sort((itemA, itemB) => {
+    return getRelevancyForBurger(itemB.name, valueForBurger) -  getRelevancyForBurger(itemA.name, valueForBurger);
+}));
+    } else {
+        clearBurgerList();
+    }
+});
+
+function closeBurgerMenu() {
+    burger.classList.add('hideBurger');
+    burger.classList.remove('transformClass');
+    overlayTwo.classList.remove('translate-image');
+    overlayTwo.classList.add('closing');
+}
+
+/*ADD SCROLL TO TOP ARROW FUNCTION */
+
+function scrollToHeaderButton() {
+    var windowHeight =  document.body.scrollBy.name;
+    console.log(windowHeight);
+}
+scrollToHeaderButton();
