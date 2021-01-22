@@ -52,27 +52,23 @@
     .text-div{  
         margin: 0px;
         margin-bottom: 0px;
-        margin-top: 0px;
+        margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
-        width: 80%;
-        height: 300px;
+        width: 360px;
       
     }
     .text-about-us,.e2{
-        font-size: 19px;
-        
+        font-size: 17px;
     }
     #spanTxt,.oranges{
         font-size: 25px;
     }
     .swiper2{
+        margin: 30px;
         margin-top: 0px;
-        height: 300px;
+        height: 200px;
         margin-bottom: 0px;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
     }
     .products-discount{      
         padding-top: 20px;
@@ -204,8 +200,5 @@
         margin-left: auto;
         margin-right: auto;
         margin-top:40px ;
-    }
-    .swiper7{
-        width: 300px;
     }
 }

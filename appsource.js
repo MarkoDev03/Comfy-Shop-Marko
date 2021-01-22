@@ -26,7 +26,8 @@ var bootStrapLinkOne = document.createElement('script');
 var mapBoxCssDierections = document.createElement('link');
 var linkMapBoxCss = document.createElement('link');
 var searchSelector = document.querySelector('.shop-code');
-
+var methodOfSort = document.getElementById('sort-method');
+methodOfSort.innerHTML = ` <button class="sort-button" id="all">all</button><button class="sort-button" id="devices">devices</button><button class="sort-button" id="chairs">chairs</button><button class="sort-button" id="tables">tables</button><button class="sort-button" id="lights">lights</button><button class="sort-button" id="bed">bed</button><button class="sort-button" id="picture">picture</button><button class="sort-button" id="bathroom">bathroom</button><button class="sort-button" id="woredrobers">woredrobers</button><button class="sort-button" id="elements">elements</button><button class="sort-button" id="decorative">decorative</button><button class="sort-button" id="carpet">carpet</button>`;
 
 bootStrapLinkOne.setAttribute('src', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 jQuerySetUpTwo.setAttribute('src', 'https://code.jquery.com/jquery-3.5.0.js');
@@ -161,7 +162,7 @@ var swiper1 = new Swiper('.swiper1', {
 
 
 var textHistory = " ";
-document.getElementById('historycal-text').innerHTML = `<p><p id="spanTxt" style="text-align: justify;">Furniture</p><p class="p9">is defined as movable equipment that is created to make a person’s office or home more suitable and comfortable for living or working. Furniture can be used for storage, seating or sleeping. The concept of furniture first developed as early as 3100-2500 B.C.</p></p>
+document.getElementById('historycal-text').innerHTML = `<p><p id="spanTxt" style="text-align: justify;">Furniture</p><p class="p9">is defined as movable equipment that is created to make a person office or home more suitable and comfortable for living or working. Furniture can be used for storage, seating or sleeping. The concept of furniture first developed as early as 3100-2500 B.C.</p></p>
 `;
 var imageArray = [{ url: "./images/img1.jpg" }, { url: "./images/img2.jpg" }, { url: "./images/img4.jpg" }, { url: "./images/img5.jpg" }, { url: "./images/img9.jpg" }, { url: "./images/img10.jpg" }];
 var wrapperContent = document.getElementById('wrp');
@@ -493,7 +494,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "bed")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -526,7 +527,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "chairs")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -556,7 +557,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "lights")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -587,7 +588,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "picture")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -618,7 +619,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "tables")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -647,7 +648,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "woredrobers")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -677,7 +678,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "bathroom")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -707,7 +708,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "elements")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -738,7 +739,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "decorative")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -769,7 +770,7 @@ class UI {
             result = '';
             products.forEach(itemInfo => {
                 if (itemInfo.category === "carpet")
-                    result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
+                result += `<article class="product" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine"><primary class="primary-info"><category class="category-div"><i class="fas fa-window-restore"></i><p class="category">${itemInfo.category}</p></category><button class="add-to-cart" data-id="${itemInfo.id}"></button></primary><img src=${itemInfo.image} alt="" class="product-image"><rate class="rate"><star><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></star><number class="number">(5)</number></rate><info class="product-info"><name class="name">${itemInfo.name}</name> <br><price class="prices">€${itemInfo.price}</price></info><lista>&#9705; For cash payment and online shopping</lista><state class="availability">Available</state></article>`;
             });
             productsContent.innerHTML = result;
         })
@@ -1430,28 +1431,28 @@ function generateSearch() {
                 spaceBetween: 50,
             },
             '480': {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 40,
             },
             '@640': {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 50,
             },
             '480': {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 40,
             },
             '@640': {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 50,
             },
             '300': {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 40,
             },
             '@480': {
-                slidesPerView: 2,
-                spaceBetween: 40,
+                slidesPerView: 1,
+                spaceBetween: 50,
             },
         },
     });
@@ -1624,3 +1625,9 @@ blockTwo();
 blockThree();
 blockFour();
 showImages();
+
+var footerRights = document.querySelector('.footer');
+var copyRightText = document.createElement('copyright');
+copyRightText.classList.add('copyright');
+copyRightText.innerText = "Copyright © Marko Perović 2021 All rights reserved.";
+footerRights.appendChild(copyRightText);
